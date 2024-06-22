@@ -3,7 +3,17 @@ guid: 1e9e73594b40f0b418d840649cbda25a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CrackedFloorInterior.png
+    second: {fileID: 2100000, guid: 30006aa65f8846949bc5e3917b158e24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor.png
+    second: {fileID: 2100000, guid: e47a123e0c38b324fabe219ec4e80d5a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

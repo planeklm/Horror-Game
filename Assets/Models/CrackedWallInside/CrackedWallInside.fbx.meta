@@ -3,7 +3,12 @@ guid: f8d343ff9fc989d4b8288d87dc6ee490
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wallbroken.png
+    second: {fileID: 2100000, guid: aba9ed67e8ca42940b01f483663b42f4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

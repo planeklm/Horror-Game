@@ -3,7 +3,12 @@ guid: 7de8857fd660c1746a65c8f092a44f12
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CrackedCeilingInterior.png
+    second: {fileID: 2100000, guid: a17d8599321b1e64ba8bcaf85c6cfb61, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

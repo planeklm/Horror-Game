@@ -3,7 +3,12 @@ guid: f2aa2f6a32d61cb45992c16e3cdaf738
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mattress.png
+    second: {fileID: 2100000, guid: 31d73cd0b54280d4da59ebba632534ee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

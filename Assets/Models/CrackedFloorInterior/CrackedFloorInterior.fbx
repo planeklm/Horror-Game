@@ -10,14 +10,14 @@ FBXHeaderExtension:  {
 	CreationTimeStamp:  {
 		Version: 1000
 		Year: 2024
-		Month: 5
-		Day: 31
-		Hour: 16
-		Minute: 55
-		Second: 37
-		Millisecond: 188
+		Month: 6
+		Day: 20
+		Hour: 21
+		Minute: 37
+		Second: 16
+		Millisecond: 496
 	}
-	Creator: "Blockbench 4.10.2"
+	Creator: "Blockbench 4.10.3"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
 		Type: "UserData"
 		Version: 100
@@ -36,20 +36,20 @@ FBXHeaderExtension:  {
 			P: "Original", "Compound", "", ""
 			P: "Original|ApplicationVendor", "KString", "", "", "Blockbench"
 			P: "Original|ApplicationName", "KString", "", "", "Blockbench FBX Exporter"
-			P: "Original|ApplicationVersion", "KString", "", "", "4.10.2"
+			P: "Original|ApplicationVersion", "KString", "", "", "4.10.3"
 			P: "Original|DateTime_GMT", "DateTime", "", "", "01/01/1970 00:00:00.000"
 			P: "Original|FileName", "KString", "", "", "/foobar.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Blockbench"
 			P: "LastSaved|ApplicationName", "KString", "", "", "Blockbench FBX Exporter"
-			P: "LastSaved|ApplicationVersion", "KString", "", "", "4.10.2"
+			P: "LastSaved|ApplicationVersion", "KString", "", "", "4.10.3"
 			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "01/01/1970 00:00:00.000"
 			P: "Original|ApplicationNativeFile", "KString", "", "", ""
 		}
 	}
 }
 FileId: "iVFoobar"
-CreationTime: "2024-05-31 15:55:37:188"
+CreationTime: "2024-06-20 20:37:16:496"
 Creator: "Made with Blockbench"
 GlobalSettings:  {
 	Version: 1000
@@ -78,7 +78,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 1835343761 {
+	Document: 394995135 {
 		Scene: "Scene"
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
@@ -98,7 +98,7 @@ References:
 
 Definitions:  {
 	Version: 100
-	Count: 6
+	Count: 9
 	ObjectType: "GlobalSettings" {
 		Count: 1
 	}
@@ -194,7 +194,7 @@ Definitions:  {
 		}
 	}
 	ObjectType: "Material" {
-		Count: 1
+		Count: 2
 		PropertyTemplate: "FbxSurfaceLambert" {
 			Properties70:  {
 				P: "ShadingModel", "KString", "", "", "Lambert"
@@ -218,7 +218,7 @@ Definitions:  {
 		}
 	}
 	ObjectType: "Texture" {
-		Count: 1
+		Count: 2
 		PropertyTemplate: "FbxFileTexture" {
 			Properties70:  {
 				P: "TextureTypeUse", "enum", "", "",0
@@ -241,7 +241,7 @@ Definitions:  {
 		}
 	}
 	ObjectType: "Video" {
-		Count: 1
+		Count: 2
 		PropertyTemplate: "FbxVideo" {
 			Properties70:  {
 				P: "ImageSequence", "bool", "", "",0
@@ -268,7 +268,7 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 42425382, "Geometry::cube", "Mesh" {
+	Geometry: 70779081, "Geometry::cube", "Mesh" {
 		Vertices: *24 {
 			a: 150,6.25,150,150,6.25,-150,150,0,150,150,0,-150,-150,6.25,-150,-150,6.25,150,-150,0,-150,-150,0,150
 		}
@@ -297,10 +297,10 @@ Objects:  {
 		LayerElementMaterial: 0 {
 			Version: 101
 			Name: ""
-			MappingInformationType: "AllSame"
+			MappingInformationType: "ByPolygon"
 			ReferenceInformationType: "IndexToDirect"
-			Materials: *1 {
-				a: 0
+			Materials: *6 {
+				a: 0,0,0,0,1,1
 			}
 		}
 		Layer: 0 {
@@ -319,7 +319,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 37165457, "Model::cube", "Mesh" {
+	Model: 86305124, "Model::cube", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -334,7 +334,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Material: 3717511, "Material::CrackedFloorInterior.png", "" {
+	Material: 7998554, "Material::CrackedFloorInterior.png", "" {
 		Version: 102
 		ShadingModel: "lambert"
 		MultiLayer: 0
@@ -345,26 +345,58 @@ Objects:  {
 			P: "Opacity", "double", "Number", "",1
 		}
 	}
-	Texture: 46796169, "Texture::CrackedFloorInterior.png", "" {
+	Texture: 41777899, "Texture::CrackedFloorInterior.png", "" {
 		Type: "TextureVideoClip"
 		Version: 202
 		TextureName: "Texture::CrackedFloorInterior.png"
 		Media: "Video::CrackedFloorInterior.png"
-		FileName: "C:\Users\wedgy\Downloads\CrackedFloorInterior.png"
+		FileName: "D:\Downloads\CrackedFloorInterior.png"
 		RelativeFilename: "CrackedFloorInterior.png"
 		ModelUVTranslation: 0,0
 		ModelUVScaling: 1,1
 		Texture_Alpha_Source: "None"
 		Cropping: 0,0,0,0
 	}
-	Video: 65284272, "Video::CrackedFloorInterior.png", "Clip" {
+	Video: 68509906, "Video::CrackedFloorInterior.png", "Clip" {
 		Type: "Clip"
 		Properties70:  {
-			P: "Path", "KString", "XRefUrl", "", "C:\Users\wedgy\Downloads\CrackedFloorInterior.png"
+			P: "Path", "KString", "XRefUrl", "", "D:\Downloads\CrackedFloorInterior.png"
 		}
 		UseMipMap: 0
-		Filename: "C:\Users\wedgy\Downloads\CrackedFloorInterior.png"
+		Filename: "D:\Downloads\CrackedFloorInterior.png"
 		RelativeFilename: "CrackedFloorInterior.png"
+	}
+	Material: 26723866, "Material::floor.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 85302812, "Texture::floor.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::floor.png"
+		Media: "Video::floor.png"
+		FileName: "D:\Downloads\floor.png"
+		RelativeFilename: "floor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 1435958, "Video::floor.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "D:\Downloads\floor.png"
+		}
+		UseMipMap: 0
+		Filename: "D:\Downloads\floor.png"
+		RelativeFilename: "floor.png"
 	}
 }
 
@@ -372,11 +404,14 @@ Objects:  {
 ;------------------------------------------------------------------
 
 Connections:  {
-	C: "OO",37165457,0
-	C: "OO",42425382,37165457
-	C: "OO",3717511,37165457
-	C: "OP",46796169,3717511, "DiffuseColor"
-	C: "OO",65284272,46796169
+	C: "OO",86305124,0
+	C: "OO",70779081,86305124
+	C: "OO",7998554,86305124
+	C: "OO",26723866,86305124
+	C: "OP",41777899,7998554, "DiffuseColor"
+	C: "OO",68509906,41777899
+	C: "OP",85302812,26723866, "DiffuseColor"
+	C: "OO",1435958,85302812
 }
 
 ; Takes section
