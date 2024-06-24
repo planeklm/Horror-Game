@@ -40,6 +40,9 @@ public class Movement : MonoBehaviour
     float velocityY;
     bool isGrounded;
 
+    public bool canMove;
+    public bool canLook;
+
     float cameraCap;
     Vector2 currentMouseDelta;
     Vector2 currentMouseDeltaVelocity;
@@ -62,8 +65,19 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        UpdateMouse();
-        UpdateMove();
+        if (canMove == true && canLook == true)
+        {
+            UpdateMouse();
+            UpdateMove();
+        }
+        else if (canMove == false && canLook == true)
+        {
+            UpdateMouse();
+        }
+        else if (canMove == true && canLook == false)
+        {
+            UpdateMove();
+        }
     }
 
     void UpdateMouse()
