@@ -12,6 +12,11 @@ public class Mainmenu : MonoBehaviour
     public LevelLoader levelLoaderScript;
     public GameObject settingsPanel;
 
+    void Start()
+    {
+        settingsPanel.SetActive(false);
+    }
+
     public void PlayGame()
     {
         levelLoaderScript.LoadNextLevel();
@@ -20,8 +25,14 @@ public class Mainmenu : MonoBehaviour
 
     public void Settings()
     {
-        OpenSettingsPanel();
+        SettingsPanel(true);
         print("Success: Opening settings menu");
+    }
+
+    public void CloseSettings()
+    {
+        SettingsPanel(false);
+        print("Success: Closing settings menu");
     }
 
     public void QuitGame()
@@ -30,8 +41,15 @@ public class Mainmenu : MonoBehaviour
         print("Success: The game has been closed.");
     }
 
-    void OpenSettingsPanel()
+    void SettingsPanel(bool State)
     {
-        settingsPanel.SetActive(false);
+        if (State == true)
+        {
+            settingsPanel.SetActive(true);
+        }
+        if (State == false)
+        {
+            settingsPanel.SetActive(false);
+        }
     }
 }
