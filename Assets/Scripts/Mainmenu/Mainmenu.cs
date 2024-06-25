@@ -8,24 +8,30 @@ using UnityEngine.SceneManagement;
 public class Mainmenu : MonoBehaviour
 {
     private int CurrentScene = 0;
+    public GameObject levelLoaderObject;
+    public LevelLoader levelLoaderScript;
+    public GameObject settingsPanel;
 
     public void PlayGame()
     {
-        CurrentScene = SceneManager.GetActiveScene().buildIndex + 2;
-        SceneManager.LoadScene(CurrentScene);
+        levelLoaderScript.LoadNextLevel();
         print("Success: Loading scene " + CurrentScene);
     }
 
     public void Settings()
     {
-        CurrentScene = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(CurrentScene);
-        print("Success: Loading scene " + CurrentScene);
+        OpenSettingsPanel();
+        print("Success: Opening settings menu");
     }
 
     public void QuitGame()
     {
         Application.Quit();
         print("Success: The game has been closed.");
+    }
+
+    void OpenSettingsPanel()
+    {
+        settingsPanel.SetActive(false);
     }
 }
