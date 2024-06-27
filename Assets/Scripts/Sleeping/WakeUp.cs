@@ -23,9 +23,7 @@ public class WakeUp : MonoBehaviour
         sound.GetComponent<AudioSource>().clip = snoringSFX;
         sound.Play();
 
-        movement = Player.GetComponent<Movement>();
-        movement.canLook = false;
-        movement.canMove = false;
+        StatusPlayer(false, false);
     }
 
     void Update()
@@ -36,27 +34,36 @@ public class WakeUp : MonoBehaviour
             {
                 SwitchCamera();
                 BreakSleepUI();
-
-                sound.Stop();
-
-                sound.GetComponent<AudioSource>().clip = yawnSFX;
-                sound.loop = false;
-                sound.Play();
-
-                movement.canLook = true;
-                movement.canMove = true;
+                BreakSleepSound();
+                StatusPlayer(true, true);
             }
         }
+    }
+
+    void BreakSleepSound()
+    {
+        sound.Stop();
+        sound.GetComponent<AudioSource>().clip = yawnSFX;
+        sound.loop = false;
+        sound.Play();
+    }
+
+    void BreakSleepUI()
+    {
+        sleepPanel.SetActive(false);
+    }
+
+    void StatusPlayer(bool look, bool move)
+    {
+        movement = Player.GetComponent<Movement>();
+
+        movement.canLook = look;
+        movement.canMove = move;
     }
 
     void SwitchCamera()
     {
         sleepingCamera.enabled = !sleepingCamera.enabled;
         playerCamera.enabled = !playerCamera.enabled;
-    }
-
-    void BreakSleepUI()
-    {
-        sleepPanel.SetActive(false);
     }
 }
