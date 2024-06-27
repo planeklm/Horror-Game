@@ -16,7 +16,10 @@ public class WakeUp : MonoBehaviour
     public AudioClip snoringSFX;
     public AudioClip yawnSFX;
 
-    public bool alarmClockStatus;
+    public AlarmClock alarmClock;
+
+    public PlayerInteractions playerInteractions;
+    public PlayerInteractions playerInteractionsSleeping;
 
     public GameObject player;
     public Movement movement; // this will be the container of the script
@@ -31,8 +34,6 @@ public class WakeUp : MonoBehaviour
         sleepingCamAudio.enabled = true;
         playerCamAudio.enabled = false;
 
-        alarmClockStatus = true;
-
         sound.GetComponent<AudioSource>().clip = snoringSFX;
         sound.Play();
 
@@ -42,7 +43,7 @@ public class WakeUp : MonoBehaviour
     void Update()
     {
         //if we click space we will get up from the bed, destroying the UI, changing camera, changing player state and destroys the sound.
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && alarmClock.alarmClockStatus == false)
         {
             if (sleepingCamera.enabled == true)
             {
@@ -88,12 +89,20 @@ public class WakeUp : MonoBehaviour
     {
         sleepingCamera.enabled = !sleepingCamera.enabled;
         playerCamera.enabled = !playerCamera.enabled;
+
         SwitchAudio();
+        SwitchInteractions();
     }
 
     void SwitchAudio()
     {
         sleepingCamAudio.enabled = !sleepingCamAudio.enabled;
         playerCamAudio.enabled = !playerCamAudio.enabled;
+    }
+
+    void SwitchInteractions()
+    {
+        playerInteractionsSleeping.enabled = !playerInteractionsSleeping.enabled;
+        playerInteractions.enabled = !playerInteractions.enabled;
     }
 }
