@@ -6,14 +6,10 @@ public class AlarmClock : MonoBehaviour, IInteractable
 {
     public AudioSource audioSource;
     public AudioClip audioClip;
+    public AlarmClock alarmClock;
 
+    [HideInInspector]
     public bool alarmClockStatus;
-
-    public bool HasInteracted
-    {
-        get => throw new System.NotImplementedException();
-        set => throw new System.NotImplementedException();
-    }
 
     void Start()
     {
@@ -41,6 +37,7 @@ public class AlarmClock : MonoBehaviour, IInteractable
     {
         audioSource.Stop();
         alarmClockStatus = false;
+        Destroy(alarmClock);
     }
 
     public void Interact()

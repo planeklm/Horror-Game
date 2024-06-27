@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class WakeUp : MonoBehaviour
@@ -11,6 +12,7 @@ public class WakeUp : MonoBehaviour
     public AudioListener playerCamAudio;
 
     public GameObject sleepingUI;
+    public TextMeshProUGUI sleepingUIText;
 
     public AudioSource sound;
     public AudioClip snoringSFX;
@@ -49,6 +51,11 @@ public class WakeUp : MonoBehaviour
             {
                 GetUpFromBed();
             }
+        }
+
+        if (alarmClock.alarmClockStatus == false)
+        {
+            sleepingUIText.text = "(press SPACE to get up)";
         }
     }
 

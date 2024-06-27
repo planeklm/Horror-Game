@@ -999,37 +999,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 187691657}
   m_SourcePrefab: {fileID: 100100000, guid: 4c0b423601d9f6f478e4bf581024e27a, type: 3}
---- !u!1 &177117196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f6d5fdb8e3f5df4b94250db20bd7aac, type: 3}
-  m_PrefabInstance: {fileID: 1247475128}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &177117197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2f6d5fdb8e3f5df4b94250db20bd7aac, type: 3}
   m_PrefabInstance: {fileID: 1247475128}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &177117198
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177117196}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.23, y: 1.9, z: 1.22}
-  m_Center: {x: 0, y: 0.92, z: -0.09}
 --- !u!1 &187691653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c0b423601d9f6f478e4bf581024e27a, type: 3}
@@ -1257,8 +1231,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.14, y: 2.57, z: 1.12}
-  m_Center: {x: 0, y: 1.27, z: 0}
+  m_Size: {x: 1.14, y: 0.93, z: 1.12}
+  m_Center: {x: 0, y: 0.53, z: 0}
 --- !u!1 &303718530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3477864577585124648, guid: 2f6d5fdb8e3f5df4b94250db20bd7aac, type: 3}
@@ -1420,6 +1394,7 @@ Transform:
   - {fileID: 253380171}
   - {fileID: 1344292306}
   - {fileID: 279266127}
+  - {fileID: 693596460}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319891598 stripped
@@ -2808,6 +2783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1179627806}
   audioClip: {fileID: 8300000, guid: 733cf4bd2ad2068458cbd249ee445bee, type: 3}
+  alarmClock: {fileID: 693596461}
   alarmClockStatus: 0
 --- !u!65 &693596462
 BoxCollider:
@@ -3992,10 +3968,13 @@ MonoBehaviour:
   sleepingCamAudio: {fileID: 1108661998}
   playerCamAudio: {fileID: 963194226}
   sleepingUI: {fileID: 1000090437}
+  sleepingUIText: {fileID: 17260408}
   sound: {fileID: 1975544816}
   snoringSFX: {fileID: 8300000, guid: 8c498a5ebecd8a54f903f3014a8afddc, type: 3}
   yawnSFX: {fileID: 8300000, guid: 3ade6887db9ca4f4ca54f4e1b12238bf, type: 3}
   alarmClock: {fileID: 693596461}
+  playerInteractions: {fileID: 1130917589}
+  playerInteractionsSleeping: {fileID: 1891080520}
   player: {fileID: 1130917581}
   movement: {fileID: 1130917582}
 --- !u!1 &1110596683 stripped
@@ -4218,7 +4197,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130917581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f325df2db5963a44598114381dfbad13, type: 3}
   m_Name: 
@@ -4814,9 +4793,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 968341602}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2f6d5fdb8e3f5df4b94250db20bd7aac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 177117198}
     - targetCorrespondingSourceObject: {fileID: -3477864577585124648, guid: 2f6d5fdb8e3f5df4b94250db20bd7aac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 303718534}
@@ -6256,19 +6232,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 314818374}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 066263f76ff49f543b198141ebe17ce7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.362
+      value: 1.6420002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 066263f76ff49f543b198141ebe17ce7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6984346
+      value: -0.82986426
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 066263f76ff49f543b198141ebe17ce7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.0425
+      value: 2.1224995
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 066263f76ff49f543b198141ebe17ce7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7374,6 +7350,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1891080519}
   - component: {fileID: 1891080518}
+  - component: {fileID: 1891080520}
+  - component: {fileID: 1891080521}
   m_Layer: 0
   m_Name: Sleeping Player
   m_TagString: Untagged
@@ -7414,6 +7392,49 @@ Transform:
   - {fileID: 1108662000}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1891080520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891080516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f325df2db5963a44598114381dfbad13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCam: {fileID: 1108661999}
+  interactionDistance: 2
+  interactionUI: {fileID: 567811808}
+  interactionText: {fileID: 125149806}
+  interactionDescriptionText: {fileID: 1151752739}
+--- !u!143 &1891080521
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891080516}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1911234348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8131,4 +8152,3 @@ SceneRoots:
   - {fileID: 1540984934}
   - {fileID: 1242235377}
   - {fileID: 1891080519}
-  - {fileID: 1590439980}
