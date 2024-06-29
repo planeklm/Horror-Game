@@ -60,16 +60,11 @@ public class WakeUp : MonoBehaviour
 
         SwitchCamera();
         StopSleepUI();
-        StopSleepSound();
+        FindObjectOfType<AudioManager>().Stop("Snoring");
+        FindObjectOfType<AudioManager>().Play("Yawn");
         StatusPlayer(true, true);
 
         Destroy(sleepingUI);
-    }
-
-    void StopSleepSound()
-    {
-        FindObjectOfType<AudioManager>().Stop("Snoring");
-        FindObjectOfType<AudioManager>().Play("Yawn");
     }
 
     void StopSleepUI()

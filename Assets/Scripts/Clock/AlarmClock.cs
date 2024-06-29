@@ -18,7 +18,7 @@ public class AlarmClock : MonoBehaviour, IInteractable
 
     public string GetDescription()
     {
-        return "";
+        return null;
     }
 
     public string GetInteractText()
@@ -35,7 +35,10 @@ public class AlarmClock : MonoBehaviour, IInteractable
     void DisabledAlarmClock()
     {
         FindObjectOfType<AudioManager>().StopAudio(audioSource, "AlarmClock");
+
         alarmClockStatus = false;
+
+        FindObjectOfType<AudioManager>().Play("Beep");
         Destroy(alarmClock);
     }
 
