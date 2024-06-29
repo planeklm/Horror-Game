@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Box : MonoBehaviour, IInteractable
+public class JohnsonPoster : MonoBehaviour, IInteractable
 {
     public string GetDescription()
     {
-        return "I should probaly move these.";
+        return "Jimmy dropped the duce. Godamnit.";
     }
 
     public string GetInteractText()
     {
-        return "";
+        return null;
     }
 
     public void Interact()

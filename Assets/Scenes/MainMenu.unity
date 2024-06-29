@@ -2230,7 +2230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -15.647949, y: 15.647888}
+  m_AnchoredPosition: {x: -60, y: 30}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &603745021
@@ -4745,7 +4745,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 15.647949, y: 15.647888}
+  m_AnchoredPosition: {x: 60, y: 30}
   m_SizeDelta: {x: 175, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1362838903
@@ -7438,23 +7438,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 739c6569a1eb0c448804a9e0e49f34b1, type: 3}
-  FilterQuality: 1
+  FilterQuality: 0
   VideoMode: 0
-  DisplaySizeX: 619
-  DisplaySizeY: 619
-  StretchToDisplay: 0
-  AspectRatio: 1.2
-  EnableTVCurvature: 0
-  Curvature: 0
+  DisplaySizeX: 1972
+  DisplaySizeY: 988
+  StretchToDisplay: 1
+  AspectRatio: 1.96
+  EnableTVCurvature: 1
+  Curvature: 0.198
   TVOverlay: {fileID: 2800000, guid: 983b4e2248d599443981d96b39576aeb, type: 3}
-  EnablePixelMask: 0
-  PixelMaskTexture: {fileID: 2800000, guid: 0a4236f7ea7fa4940a795446170f8f8f, type: 3}
+  EnablePixelMask: 1
+  PixelMaskTexture: {fileID: 2800000, guid: 71aeaac4c4088784a91d6a818455e895, type: 3}
   MaskRepeatX: 160
   MaskRepeatY: 90
   PixelMaskBrightness: 1
   IQOffset: {x: 0, y: 0}
   IQScale: {x: 1, y: 1}
-  RFNoise: 0.24
+  RFNoise: 0.32
   LumaSharpen: 0
   QuantizeRGB: 0
   RBits: 8

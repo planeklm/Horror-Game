@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        UpdateGameState(GameState.Sleeping);
+        UpdateGameState(GameState.InBed);
     }
 
     void Awake()
@@ -27,11 +27,11 @@ public class GameManager : MonoBehaviour
 
         switch (newState)
         {
-            case GameState.Sleeping:
+            case GameState.InBed:
                 break;
-            case GameState.TurnAlarmOff:
+            case GameState.AlarmOff:
                 break;
-            case GameState.WokenUp:
+            case GameState.GotUpFrombed:
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
 public enum GameState
 {
-    Sleeping,
-    TurnAlarmOff,
-    WokenUp
+    InBed,
+    AlarmOff,
+    GotUpFrombed
 }

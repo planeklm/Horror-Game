@@ -28,8 +28,6 @@ public class WakeUp : MonoBehaviour
 
     void Start()
     {
-        GameManager.Instance.UpdateGameState(GameState.Sleeping);
-
         sleepingCamera.enabled = true;
         playerCamera.enabled = false;
 
@@ -61,7 +59,7 @@ public class WakeUp : MonoBehaviour
 
     void GetUpFromBed()
     {
-        GameManager.Instance.UpdateGameState(GameState.WokenUp);
+        GameManager.Instance.UpdateGameState(GameState.GotUpFrombed);
 
         SwitchCamera();
         BreakSleepUI();
