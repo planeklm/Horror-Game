@@ -14,7 +14,6 @@ public class WakeUp : MonoBehaviour
     public GameObject sleepingUI;
     public TextMeshProUGUI sleepingUIText;
 
-    public AudioSource sound;
     public AudioClip snoringSFX;
     public AudioClip yawnSFX;
 
@@ -34,15 +33,13 @@ public class WakeUp : MonoBehaviour
         sleepingCamAudio.enabled = true;
         playerCamAudio.enabled = false;
 
-        sound.GetComponent<AudioSource>().clip = snoringSFX;
-        sound.Play();
-
+        FindObjectOfType<AudioManager>().Play("Snoring");
         StatusPlayer(false, false);
     }
 
     void Update()
     {
-        //if we click space we will get up from the bed, destroying the UI, changing camera, changing player state and destroys the sound.
+        //if we click space we will get up from the bed, destroying the bed UI, changing camera, changing player state and destroys the sound.
         if (Input.GetKey(KeyCode.Space) && alarmClock.alarmClockStatus == false)
         {
             if (sleepingCamera.enabled == true)
@@ -59,25 +56,23 @@ public class WakeUp : MonoBehaviour
 
     void GetUpFromBed()
     {
-        GameManager.Instance.UpdateGameState(GameState.GotUpFrombed);
+        GameManager.instance.UpdateGameState(GameState.GotUpFrombed);
 
         SwitchCamera();
-        BreakSleepUI();
-        BreakSleepSound();
+        StopSleepUI();
+        StopSleepSound();
         StatusPlayer(true, true);
 
         Destroy(sleepingUI);
     }
 
-    void BreakSleepSound()
+    void StopSleepSound()
     {
-        sound.Stop();
-        sound.GetComponent<AudioSource>().clip = yawnSFX;
-        sound.loop = false;
-        sound.Play();
+        FindObjectOfType<AudioManager>().Stop("Snoring");
+        FindObjectOfType<AudioManager>().Play("Yawn");
     }
 
-    void BreakSleepUI()
+    void StopSleepUI()
     {
         sleepingUI.SetActive(false);
     }

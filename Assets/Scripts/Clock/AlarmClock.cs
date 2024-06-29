@@ -28,14 +28,13 @@ public class AlarmClock : MonoBehaviour, IInteractable
 
     void EnabledAlarmClock()
     {
-        audioSource.GetComponent<AudioSource>().clip = audioClip;
-        audioSource.Play();
+        FindObjectOfType<AudioManager>().PlayAudio(audioSource, "AlarmClock");
         alarmClockStatus = true;
     }
 
     void DisabledAlarmClock()
     {
-        audioSource.Stop();
+        FindObjectOfType<AudioManager>().StopAudio(audioSource, "AlarmClock");
         alarmClockStatus = false;
         Destroy(alarmClock);
     }

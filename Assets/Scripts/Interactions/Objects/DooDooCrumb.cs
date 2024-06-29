@@ -11,11 +11,11 @@ public class DooDooCrumb : MonoBehaviour, IInteractable
 
     public string GetInteractText()
     {
-        return "[E] Inspect";
+        return null;
     }
 
     public void Interact()
     {
-        throw new System.NotImplementedException();
+        return;
     }
 }

@@ -3,7 +3,17 @@ guid: 2f0797e88c4dc7a4a9d2c800b93c3266
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffee Stained Texture.png
+    second: {fileID: 2100000, guid: fc2ff1c287299af4d8322f59bfcb90e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wanted-poster.png
+    second: {fileID: 2100000, guid: 49608ac86d68f734bab5d0f0f7e23f31, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

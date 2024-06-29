@@ -11,11 +11,11 @@ public class Box : MonoBehaviour, IInteractable
 
     public string GetInteractText()
     {
-        return "";
+        return null;
     }
 
     public void Interact()
     {
-        throw new System.NotImplementedException();
+        return;
     }
 }

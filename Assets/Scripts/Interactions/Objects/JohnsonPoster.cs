@@ -6,7 +6,7 @@ public class JohnsonPoster : MonoBehaviour, IInteractable
 {
     public string GetDescription()
     {
-        return "Jimmy dropped the duce. Godamnit.";
+        return "Jimmy dropped the duce again. Goddamnit.";
     }
 
     public string GetInteractText()
@@ -16,6 +16,6 @@ public class JohnsonPoster : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        throw new System.NotImplementedException();
+        return;
     }
 }

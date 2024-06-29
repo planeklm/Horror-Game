@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Splashscreen : MonoBehaviour
 {
-    public float waitTime = 12f;
+    public float waitTime = 6f;
 
     // Start is called before the first frame update
     void Start()
