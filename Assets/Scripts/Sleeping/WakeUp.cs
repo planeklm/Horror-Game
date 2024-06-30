@@ -47,7 +47,6 @@ public class WakeUp : MonoBehaviour
                 GetUpFromBed();
             }
         }
-
         if (alarmClock.alarmClockStatus == false)
         {
             sleepingUIText.text = "(press SPACE to get up)";
@@ -61,7 +60,7 @@ public class WakeUp : MonoBehaviour
         SwitchCamera();
         StopSleepUI();
         FindObjectOfType<AudioManager>().Stop("Snoring");
-        FindObjectOfType<AudioManager>().Play("Yawn");
+        FindObjectOfType<AudioManager>().Play("Sheetsrussling");
         StatusPlayer(true, true);
 
         Destroy(sleepingUI);

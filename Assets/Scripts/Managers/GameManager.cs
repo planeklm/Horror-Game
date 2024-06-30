@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +11,10 @@ public class GameManager : MonoBehaviour
     public static event Action<GameState> OnGameStateChanged;
 
     public GameState State;
+
+    public int postersRippedTotal;
+
+    public GameObject radio;
 
     void Start()
     {
@@ -29,6 +34,17 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void PostersRipped()
+    {
+        postersRippedTotal = postersRippedTotal + 1;
+
+        if (postersRippedTotal == 3)
+        {
+            UpdateGameState(GameState.PostersRipped);
+            print("Posters destroyed.");
+        }
+    }
+
     public void UpdateGameState(GameState newState)
     {
         State = newState;
@@ -40,6 +56,11 @@ public class GameManager : MonoBehaviour
             case GameState.AlarmOff:
                 break;
             case GameState.GotUpFrombed:
+                break;
+            case GameState.PostersRipped:
+                radio.GetComponent<Radio>().enabled = true;
+                break;
+            case GameState.AllowedToLeaveApartment:
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
@@ -53,5 +74,7 @@ public enum GameState
 {
     InBed,
     AlarmOff,
-    GotUpFrombed
+    GotUpFrombed,
+    PostersRipped,
+    AllowedToLeaveApartment
 }
