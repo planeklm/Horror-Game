@@ -38,7 +38,6 @@ public class WakeUp : MonoBehaviour
 
     void Update()
     {
-        //if we click space we will get up from the bed, destroying the bed UI, changing camera, changing player state and destroys the sound.
         if (Input.GetKey(KeyCode.Space) && !alarmClock.alarmClockStatus)
         {
             if (sleepingCamera.enabled)
@@ -71,6 +70,8 @@ public class WakeUp : MonoBehaviour
         movement.canLook = look;
         movement.canMove = move;
     }
+
+    //! This should be changed, it's really bad. Like really bad. D:
 
     void SwitchCamera()
     {
