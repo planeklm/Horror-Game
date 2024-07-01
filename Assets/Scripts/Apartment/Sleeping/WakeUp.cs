@@ -32,6 +32,8 @@ public class WakeUp : MonoBehaviour
         sleepingCamAudio.enabled = true;
         playerCamAudio.enabled = false;
 
+        sleepingUI.SetActive(true);
+
         FindObjectOfType<AudioManager>().Play("Snoring");
         StatusPlayer(false, false);
     }
