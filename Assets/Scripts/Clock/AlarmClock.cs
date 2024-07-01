@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class AlarmClock : MonoBehaviour, IInteractable
 {
     public AudioSource audioSource;
     public AudioClip audioClip;
-    public AlarmClock alarmClock;
+    public TextMeshProUGUI sleepingUIText;
 
     [HideInInspector]
     public bool alarmClockStatus;
@@ -23,7 +24,7 @@ public class AlarmClock : MonoBehaviour, IInteractable
 
     public string GetInteractText()
     {
-        return "[E] Stop the alarm.";
+        return "[E] Stop the alarm";
     }
 
     void EnabledAlarmClock()
@@ -35,11 +36,11 @@ public class AlarmClock : MonoBehaviour, IInteractable
     void DisabledAlarmClock()
     {
         FindObjectOfType<AudioManager>().StopAudio(audioSource, "AlarmClock");
+        FindObjectOfType<AudioManager>().Play("Beep");
 
         alarmClockStatus = false;
-
-        FindObjectOfType<AudioManager>().Play("Beep");
-        Destroy(alarmClock);
+        sleepingUIText.text = "(press SPACE to get up)";
+        GetComponent<AlarmClock>().enabled = false;
     }
 
     public void Interact()

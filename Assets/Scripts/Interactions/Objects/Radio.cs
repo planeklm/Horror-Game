@@ -10,18 +10,12 @@ public class Radio : MonoBehaviour, IInteractable
     void Awake()
     {
         GetComponent<Radio>().enabled = false;
-        print("Done!");
     }
 
     void Start()
     {
         audioSource.Play();
         radioToggle = true;
-    }
-
-    void Update()
-    {
-        print(radioToggle);
     }
 
     public string GetDescription()

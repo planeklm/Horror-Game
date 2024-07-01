@@ -14,9 +14,6 @@ public class WakeUp : MonoBehaviour
     public GameObject sleepingUI;
     public TextMeshProUGUI sleepingUIText;
 
-    public AudioClip snoringSFX;
-    public AudioClip yawnSFX;
-
     public AlarmClock alarmClock;
 
     public PlayerInteractions playerInteractions;
@@ -24,6 +21,8 @@ public class WakeUp : MonoBehaviour
 
     public GameObject player;
     public Movement movement; // this will be the container of the script
+
+    private bool canGetUp;
 
     void Start()
     {
@@ -40,16 +39,12 @@ public class WakeUp : MonoBehaviour
     void Update()
     {
         //if we click space we will get up from the bed, destroying the bed UI, changing camera, changing player state and destroys the sound.
-        if (Input.GetKey(KeyCode.Space) && alarmClock.alarmClockStatus == false)
+        if (Input.GetKey(KeyCode.Space) && !alarmClock.alarmClockStatus)
         {
-            if (sleepingCamera.enabled == true)
+            if (sleepingCamera.enabled)
             {
                 GetUpFromBed();
             }
-        }
-        if (alarmClock.alarmClockStatus == false)
-        {
-            sleepingUIText.text = "(press SPACE to get up)";
         }
     }
 
@@ -62,8 +57,6 @@ public class WakeUp : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("Snoring");
         FindObjectOfType<AudioManager>().Play("Sheetsrussling");
         StatusPlayer(true, true);
-
-        Destroy(sleepingUI);
     }
 
     void StopSleepUI()
@@ -83,7 +76,6 @@ public class WakeUp : MonoBehaviour
     {
         sleepingCamera.enabled = !sleepingCamera.enabled;
         playerCamera.enabled = !playerCamera.enabled;
-
         SwitchAudio();
         SwitchInteractions();
     }
